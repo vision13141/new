@@ -37,8 +37,12 @@ const AddToCartPage = () => {
                         </div>
 
                         <div className="mt-6 flex justify-between">
-                            <button className="bg-btn text-white font-semibold px-4 py-2 rounded">Continue Shopping</button>
-                            <button className="bg-btn text-white font-semibold px-4 py-2 rounded">Proceed to Checkout</button>
+                            <button className="bg-btn text-white font-semibold px-4 py-2 rounded">
+                                Continue Shopping
+                            </button>
+                            <button className="bg-btn text-white font-semibold px-4 py-2 rounded">
+                                Proceed to Checkout
+                            </button>
                         </div>
                     </div>
 

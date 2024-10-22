@@ -169,6 +169,15 @@ export const reducer = (state, action) => {
     }
     // decrement end 
 
+    // CartDropDown start 
+    if (action.type == "CartDropDown") {
+        return {
+            ...state,
+            ddCart: true
+        }
+    }
+    // CartDropDown end 
+
     // totalQuantity start 
     if (action.type == "totalQuantity") {
         return {
@@ -181,6 +190,16 @@ export const reducer = (state, action) => {
         }
     }
     // totalQuantity end 
+
+
+    // CloseCart start 
+    if (action.type == "CloseCart") {
+        return {
+            ...state,
+            ddCart: false
+        }
+    }
+    // CloseCart end 
 
     return state
 }

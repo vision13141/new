@@ -5,7 +5,6 @@ import List from './List'
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
-import { Link } from 'react-router-dom'
 import Context from '../Context/Context';
 
 
@@ -34,7 +33,11 @@ const Navber = () => {
         }
     ]
 
-    const { totalQuantity } = useContext(Context)
+    const { totalQuantity, CartDropDown } = useContext(Context)
+
+    const cartBtn = () => {
+        CartDropDown()
+    }
 
     return (
         <div className='py-4 absolute z-50 bg-[#fff] top-11 left-0 w-full'>
@@ -62,13 +65,14 @@ const Navber = () => {
                             <CiHeart className='text-2xl' />
                         </button>
 
-                        <Link to={'/AddToCart'}>
-                            <button className='relative'>
-                                <FaCartPlus className='text-[22px] text-blck' />
 
-                                <p className='absolute -top-3 -right-4 w-[1.3vw] h-[1.3vw] text-white font-semibold bg-btn rounded-[100%]'>{totalQuantity}</p>
-                            </button>
-                        </Link>
+                        <button onClick={() => cartBtn()} className='relative'>
+                            <FaCartPlus className='text-[22px] text-blck' />
+
+                            <p className='absolute -top-3 -right-4 w-[1.3vw] h-[1.3vw] text-white font-semibold bg-btn rounded-[100%]'>
+                                {totalQuantity}
+                            </p>
+                        </button>
                     </div>
                 </div>
             </Container>

@@ -12,7 +12,6 @@ import Context from '../Context/Context'
 const Home = () => {
 
     const { popUp, cart } = useContext(Context)
-    console.log(cart)
 
     return (
         <div className='relative'>

@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick"
 import Button from './Button';
 import Context from '../Context/Context';
+import { Link } from 'react-router-dom';
 
 const Special_Dis = () => {
 
@@ -37,9 +38,9 @@ const Special_Dis = () => {
                     }
                 </Slider>
 
-                <div className="flex items-center justify-center">
+                <Link to={'/menu'} className="flex items-center justify-center">
                     <Button text={"See All"} className={`px-[56px] py-[16px] bg-black text-white mt-[50px] `} />
-                </div>
+                </Link>
             </Container>
         </div>
     )

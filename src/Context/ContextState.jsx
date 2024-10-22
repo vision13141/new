@@ -44,6 +44,7 @@ const inisialState = {
     popUp: false,
     popUpCart: [],
     cart: getLOcalStore(),
+    ddCart: false,
     totalQuantity: 0,
 }
 
@@ -361,8 +362,25 @@ const ContextState = ({ children }) => {
     // ToQuantity  And  TotalAmount 
 
 
+    // CartDropDown start
+    const CartDropDown = () => {
+        dispatch({
+            type: "CartDropDown"
+        })
+    }
+    // CartDropDown end
+
+
+    // CloseCart start
+    const CloseCart = () => {
+        dispatch({
+            type: "CloseCart"
+        })
+    }
+    // CloseCart end
+
     return (
-        <Context.Provider value={{ ...state, AddcartPopUp, addToCart, activeCategory, Close, removeCart, increment, decrement }}>
+        <Context.Provider value={{ ...state, AddcartPopUp, addToCart, activeCategory, Close, removeCart, increment, decrement, CartDropDown, CloseCart }}>
             {children}
         </Context.Provider>
     )
